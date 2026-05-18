@@ -20,7 +20,7 @@
 
 body {
     font-family: var(--font-stack);
-    background-image: url('fondo.png');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('fondo.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
