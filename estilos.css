@@ -1,0 +1,299 @@
+/* proyecto digitalización 1º Imagen para el Diagnóstico y Medicina Nuclear */
+
+:root {
+    --primary-color: #0f172a;
+    --accent-color: #0d9488;
+    --accent-hover: #0f766e;
+    --bg-light: #f8fafc;
+    --bg-card: #ffffff;
+    --text-main: #334155;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
+    --font-stack: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-stack);
+    background-image: url('fondo.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #ffffff;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* (Header & Navegación) */
+header {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    padding: 1.5rem 0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+.brand {
+    display: grid;
+    grid-template-columns: auto auto; /* Coloca el logo a la izquierda y los textos a la derecha */
+    align-items: center; /* Centra el logo verticalmente con el bloque de texto */
+    gap: 1rem; /* Deja un espacio limpio de separación entre el logo y el texto KASL */
+}
+
+.logo-top {
+    height: 55px; /* Aumentamos el tamaño para que se aprecie perfectamente el icono médico */
+    width: auto; /* Mantiene la proporción original de tu imagen para que no se deforme */
+    display: block;
+}
+.header-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.brand h1.arriba {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #ffffff;
+}
+
+.brand p small {
+    font-size: 1rem;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav ul li a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 4px;
+    transition: color 0.25s ease, background-color 0.25s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #ffffff;
+    background-color: rgba(13, 148, 136, 0.2);
+    border-bottom: 2px solid var(--accent-color);
+}
+
+/* Contenedor Principal Adaptativo */
+main.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+    align-items: stretch;      
+    min-height: 60vh;
+    width: 90%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;         
+}
+
+/* Clases de Animación y Transición */
+.animate-fade {
+    animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* (Inicio) */
+.hero-section {
+    margin-top: 2rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    padding: 2.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+.cerebrito{
+    margin-top: 2rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    padding: 1rem 5rem;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.title_h2{
+    font-size: 6rem;
+    font-weight: 800;
+    margin-bottom: 1.2rem;
+    line-height: 1.3;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    text-align: center;
+    font-family: "CerebriSans", Sans-serif;
+}
+.parrafito{
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    color: #ffffff;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+    text-align: center;
+}
+.media-container {
+    margin-top: 1.5rem;
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: #000000;
+    width: 100%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+}
+
+.responsive-media {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.grid-layout {
+    display: grid;
+}
+
+.card {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+    margin-bottom: 2rem;
+}
+
+.card-title {
+    color: #ffffff;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.card-text {
+    color: #ffffff !important;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 1rem;
+}
+
+.card-text:last-of-type {
+    margin-bottom: 0;
+}
+
+.card-highlight {
+    color: #cbd5e1 !important;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    text-align: justify;
+    font-style: italic;
+    border-left: 3px solid var(--accent-color);
+    padding-left: 0.75rem;
+    margin-top: 1rem;
+}
+/* (Quiénes Somos) */
+.about-section {
+    background-color: var(--bg-card);
+    padding: 3rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+/* (Contacto e Integraciones) */
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+@media (max-width: 768px) {
+    .contact-layout {
+        grid-template-columns: 1fr;
+    }
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-item {
+    background-color: var(--bg-card);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contact-icon {
+    width: 28px;
+    height: 28px;
+    color: var(--accent-color);
+    flex-shrink: 0;
+}
+
+.map-container {
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    background-color: var(--bg-card);
+}
+
+.map-container iframe {
+    display: block;
+}
+
+/* Pie de Página Estándar */
+footer {
+    background-color: #1e293b;
+    color: var(--text-muted);
+    text-align: center;
+    padding: 1.5rem 0;
+    font-size: 0.9rem;
+    border-top: 1px solid #334155;
+    margin-top: auto;
+}
